@@ -17,4 +17,3 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
                         to_addrs=", ".join(recipients),
                         msg=f"Subject: Today's Positivity Quotes\n\n {quote} ")
     now = dt.datetime.now()
-    # date_to_send = dt.datetime(year=2022,month=3,day=5)
