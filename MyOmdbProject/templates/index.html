@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+<h1>My Wishlist of Movies</h1>
+    <ul>
+        {% if movies == []: %}
+        <p>Wishlist is empty.</p>
+        {% endif %}
+        {% for movie in movies:%}
+        <li>{{movie.title}}--{{movie.year}}--{{movie.rating}}</li>
+        {% endfor %}
+    </ul>
+
+<a href="{{url_for('add')}}">Add Your Movies</a>
+</body>
+</html>
